@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="base64js.min.js"></script>
+	<script>
+	function checkbox(){
+		var jsonInput = {};
+		var dgData = [];
+		var dg3=document.getElementById("DG3");
+		var dg4=document.getElementById("DG4");
+		if(dg3.checked){
+		dgData.push("DG3");
+		}
+		if(dg4.checked){
+		dgData.push("DG4");
+		}
+		jsonInput["DataType"]=dgData;
+		console.log("jsonInput ",jsonInput);
+		var dgData1 = ["DG3","DG4","DG6","DG7","DG8","DG9"];
+		jsonInput["CanRun"]= dgData1;
+		console.log("jsonInput ",jsonInput);
+	}
+	var bina="1E81FA53175E024E2D6B635340002C6771958091CC002C0030003100339130";
+	var ret={};
+	var string="台灣No1";
+	var encodedString = btoa(encodeURIComponent(string));
+	
+	var unicodeAddr3 = "5paw5YyX5biCLOazsOWxseWNgOWkp+enkemHjCwwMDHphLA=";
+	console.log("addr "+b64DecodeUnicode(unicodeAddr3));
+	//console.log(atob("NjMwMDAwNTAwMjg="));
+	//console.log(atob("MDEz"));
+	//console.log(b64DecodeUnicode("gfpTF14CTi1rY1NAACxncZWAkcwALAAwADEAM5Ew"));
+	
+	function ssss(){
+	var requestURL = "https://10.190.69.3:1443/kmpmh/unblockCardTest";
+	var dataJSON = {};
+	dataJSON["Device"] = "eyJhcGlWZXJzaW9uIjoiMS4wIiwiaGVhZGVyIjoiT21qVjM2cHdIZHlaMU5YVG0wUkdCSDJPRGJXS3BZWGtBeHBseFBDK2pqMjhSaC9kSHdzRU1JeVdvTDBqYnExa0h1NFFvTU9PczBRdCtOZ29QZjEzb1NqOWdwL1k3RDU3SUtpK2liTkoralFUTWZUNW5tQ3drS1l4QS95TzhwVVpQQWh2SmdVU0NldktFczhYZVlhOFhXcGVOYU5mRkVyaWM1ME44blorWGhaRHk5WXhwL0kxV252K3I5b3pYdTBUN20rVm1OYnoxOEszS05LN244RmZpYVR2OEZTd1RZeURJQW9oWFZMN21TTk80dDBKSWF3RHBUY0UwZUxsTlp3V3kyZlJtVXNEVnkvYk9iUjdrODFzZGM2azlWOHNVamtEaEVPSmpFTmtVVHVWbTN2VE9TOXlCcGM2RXdteWVXaUszSjFFOVlYblZMUjcxM2xudFFzSzNnPT0iLCJwYXlsb2FkIjoiOVpGRHhaREZLb01mLzVDMy9IT1lZeHNkMEZNSEUvdW1IYzNveXU5bUdhUUhvZm9yeFdmTENQSWRadnorRlpZWWJ2OFlRVTR1blk5RDRoaVJXUGt2cnVHVjVDaTVpMHBPWnZUalRpd1RHVTRIcXdvUWlwb0Q1aHpCNU5MRkJBYmZBTkptcFJzY2RvSVNXTVJ3dGdHbys1SWpheHVZODIzdGg3aEVJMTE4eDNGZUI3NmU5SFR5STdNN3pmeWdnbUd3Q2wxZTBFSzZCcHNkYXcvMUZRRVZwZmZEak1mR2RtUlVPUjlSbXowUXB6aGFJVWh0NnpISnZRZE5vWER5c25SdjlWWXpva1hxSHpwaDBtUXBDaDh3QXVtNFpBeTBLdVd1WEFZOTVtSEt1Vm52cGlaZm1kMHA1SkFlQnVjNlVZWmVWQXhRVU9xMEtCdllUL1hXMnhla0hxeDhzS016R3BHNDdIekI3ZExrbXpwalBsM1hrNlQ5akpJRFRSR3Y2TmlRVjZPRkErSmxuRWZJVE55dDhjazdueGZucmVzPSIsInNpZ25hdHVyZSI6ImlxZEdEbGQvQU9jckdERWFsVUhleWVjVXdKQmdCdHlLRjA1eVY1OVhWd2xFZDg5anF5UjlOTGh6WUtvdHpWemtiRnUxOS82YWt5bUZzT1lVampIbGNPcjRWQ3MrSDYrWUxlV3VIYnJyd0tTV1I2UC9OVjF4Mzk4ckRUZHltbmNIbWcyZHBqV2dlc0sxL25PNTJxNmhlQjNKMVg3NHRZMm5FelhGZUlQcnFuVy85UU5tdmZuR2VKMmd1TkpBbWhmRmpoVk1YY1lYemtkcGtFa05HWlNQOGcrSnZmQnRkTmxDZmhiZlRqL1ZtWWF0VzRqbVRhRnRaWVBRWDFqbi90eVRtRXRXMVBwdXA4UmFWQW54S0hDZGNiQ2UzU1BDSVcrTllyMzIyWnRTMnJ6RkZuZFNtdHdCNXhGSXUwQ1lablBlWlRFUDlpanV2dFU0KzNRdm9yc3BaQT09In0=";
+	dataJSON["Company"] = "Apple";
+	 
+	$.ajax({
+		url: requestURL,
+		data: JSON.stringify(dataJSON),
+		type: "POST",
+		dataType: "json",
+		contentType: "application/json;charset=utf-8",
+		success: function(returnData){
+			console.log(returnData);
+		},
+		error: function(xhr, ajaxOptions, thrownError){
+			console.log(xhr.status);
+			console.log(thrownError);
+		}
+	});
+	
+	}
+	//console.log(rMsg("API_COMMUNICATION_FAILURE","123"));
+	//console.log(atob(bina));
+	
+
+	function b64DecodeUnicode(str) {
+    // Going backwards: from bytestream, to percent-encoding, to original string.
+    return decodeURIComponent(atob(str).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+	}
+	function func2(a=null,b=null){
+	if(isNull(b)) {console.log("a");}
+	console.log("a:"+a+" b:"+b);
+	}
+	function isNull(input){
+	if(input==null||input=="")
+		return true;
+	return false;
+	}
+	</script>
+</head>
+<body>
+<form>
+	<input type="checkbox" value="1" id="DG3" checked> DG3
+	<input type="checkbox" value="1" id="DG4" checked> DG4
+	<input type="checkbox" value="1" id="DG5" checked> DG5
+	<input type="checkbox" value="1" id="DG6" checked> DG6
+	<input type="checkbox" value="1" id="DG7" checked> DG7
+	<input type="checkbox" value="1" id="DG8" checked> DG8
+	<input type="button" value="click me" onclick="func2('','123')">
+</form>
+<span id="json"></span>
+
+</body>
+</html>
